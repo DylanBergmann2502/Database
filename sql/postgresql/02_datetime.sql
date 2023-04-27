@@ -1,0 +1,13 @@
+--DATETIME--
+
+SELECT NOW()::DATE;
+
+SELECT NOW() + INTERVAL '10 YEARS';
+
+SELECT (NOW() - INTERVAL '10 MONTHS')::DATE;
+
+SELECT EXTRACT(DOW FROM NOW());
+
+SELECT first_name, birth_date,
+EXTRACT(YEAR FROM AGE(NOW(), birth_date)) AS age
+from person;
